@@ -41,6 +41,7 @@ dependencies {
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
     implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.1.0'
     implementation 'com.google.dagger:dagger:2.44.2'
+    implementation 'androidx.room:room-ktx:2.5.1'
     kapt 'com.google.dagger:dagger-compiler:2.44.2'
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
