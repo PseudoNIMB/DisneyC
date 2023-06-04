@@ -3,4 +3,9 @@
     <string name="menu_home_title_text">Главная</string>
     <string name="menu_favor_title_text">Избранное</string>
     <string name="menu_settings_title_text">Настройки</string>
+    <string name="menu_settings_main">Настройки</string>
+    <string name="menu_setting_one">Настройка 1</string>
+    <string name="menu_setting_two">Настройка 2</string>
+    <string name="menu_setting_three">Настройка 3</string>
+    <string name="menu_setting_four">Настройка 4</string>
 </resources>
