@@ -7,7 +7,6 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import ru.pseudonimb.disneyc.databinding.FragmentFavorBinding
 
-
 class FavorFragment : Fragment() {
 
     override fun onCreateView(
