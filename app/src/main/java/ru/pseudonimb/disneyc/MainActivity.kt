@@ -7,7 +7,6 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
 import ru.pseudonimb.disneyc.databinding.ActivityMainBinding
-import ru.pseudonimb.disneyc.databinding.FragmentFavorBinding
 
 class MainActivity : AppCompatActivity() {
     //private lateinit var navController: NavController

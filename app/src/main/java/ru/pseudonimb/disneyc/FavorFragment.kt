@@ -1,4 +1,7 @@
 package ru.pseudonimb.disneyc
 
-class FavorFragment {
+import androidx.fragment.app.Fragment
+
+class FavorFragment : Fragment() {
+
 }

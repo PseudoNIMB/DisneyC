@@ -1,7 +1,8 @@
 package ru.pseudonimb.disneyc
 
-import android.os.Bundle
+import androidx.fragment.app.Fragment
 
 
-class HomeFragment {
+class HomeFragment : Fragment() {
+
 }
