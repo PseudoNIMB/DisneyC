@@ -7,7 +7,7 @@
     tools:context=".SettingsFragment">
 
     <RadioGroup
-        android:id="@+id/radio_group"
+        android:id="@+id/settings"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
@@ -17,10 +17,10 @@
             android:textAppearance="@style/TextAppearance.AppCompat.Title"
             android:textColor="@android:color/black"
             android:layout_margin="8dp"
-            android:text="@string/menu_settings_main"/>
+            android:text="@string/menu_settings_main" />
 
         <RadioButton
-            android:id="@+id/radio_popular"
+            android:id="@+id/setting_one"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
@@ -28,7 +28,7 @@
             android:textColor="@android:color/black"
             android:text="@string/menu_setting_one"/>
         <RadioButton
-            android:id="@+id/radio_top_rated"
+            android:id="@+id/setting_two"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
@@ -36,7 +36,7 @@
             android:textColor="@android:color/black"
             android:text="@string/menu_setting_two"/>
         <RadioButton
-            android:id="@+id/radio_upcoming"
+            android:id="@+id/setting_three"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
@@ -44,7 +44,7 @@
             android:textColor="@android:color/black"
             android:text="@string/menu_setting_three"/>
         <RadioButton
-            android:id="@+id/radio_now_playing"
+            android:id="@+id/setting_four"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
@@ -52,10 +52,4 @@
             android:textColor="@android:color/black"
             android:text="@string/menu_setting_four"/>
     </RadioGroup>
-
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextViewSETTINGS" />
 </FrameLayout>
