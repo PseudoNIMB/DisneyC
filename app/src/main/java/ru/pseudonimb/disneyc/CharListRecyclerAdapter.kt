@@ -20,7 +20,9 @@ class CharListRecyclerAdapter (private val clickListener: OnItemClickListener) :
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
         when (holder) {
             is CharViewHolder -> {
-
+                //Вызываем метод bind(), который мы создали, и передаем туда объект
+                //из нашей базы данных с указанием позиции
+                holder.bind(items[position])
             }
         }
     }

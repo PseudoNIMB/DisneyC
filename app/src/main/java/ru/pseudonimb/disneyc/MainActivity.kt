@@ -6,18 +6,39 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
+import androidx.recyclerview.widget.LinearLayoutManager
 import ru.pseudonimb.disneyc.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
     //private lateinit var navController: NavController
     //не получилось реализовать
     private lateinit var binding: ActivityMainBinding
+    private lateinit var charAdapter: CharListRecyclerAdapter
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         val view = binding.root
         setContentView(view)
+
+        //находим наш RV
+        main_recycler.apply {
+            //Инициализируем наш адаптер в конструктор передаем анонимно инициализированный интерфейс,
+            //оставим его пока пустым, он нам понадобится во второй части задания
+            charAdapter = CharListRecyclerAdapter(object : CharListRecyclerAdapter.OnItemClickListener{
+                override fun click(film: Char, position: Int) {}
+            })
+            //Присваиваем адаптер
+            adapter = charAdapter
+            //Присвои layoutmanager
+            layoutManager = LinearLayoutManager(this@MainActivity)
+            //Применяем декоратор для отступов
+            val decorator = TopSpacingItemDecoration(8)
+            addItemDecoration(decorator)
+        }
+        //Кладем нашу БД в RV
+        charAdapter.addItems(charDataBase)
 
         initNavigation()
 
