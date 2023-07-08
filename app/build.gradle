@@ -52,5 +52,12 @@ dependencies {
     //Приколюхи с навигацией
     implementation 'androidx.navigation:navigation-fragment-ktx:2.6.0'
     implementation "androidx.navigation:navigation-ui-ktx:2.6.0"
-
+    //Volley
+    implementation 'com.android.volley:volley:1.2.1'
+    //Picasso
+    implementation 'com.sqareup.picasso:picasso:2.71828'
+    //Fragment KTX
+    implementation 'androidx.fragment:fragment-ktx:1.6.0'
+    //Location
+    implementation 'com.google.android.gms:play-services-location:21.0.1'
 }
