@@ -25,10 +25,7 @@ class HomeFragment : Fragment() {
         val retrofit = Retrofit.Builder()
             .baseUrl("https://disneyapi.dev")
             .addConverterFactory(GsonConverterFactory.create()).build()
-        val charAPI = retrofit.create(CharacterAPI::class.java)
-        CoroutineScope(Dispatchers.IO).launch {
-            val Char = charAPI.getCharacterById()
-        }
+
 
         return view
     }
