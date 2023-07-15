@@ -1,5 +1,8 @@
 package ru.pseudonimb.disneyc
 
 data class CharItem(
-    val char: String,
+    val _id : Int,
+    val films : String,
+    val shortFilms : String,
+    val name : String
 )
