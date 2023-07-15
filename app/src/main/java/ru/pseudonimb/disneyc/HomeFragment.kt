@@ -5,6 +5,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import retrofit2.Retrofit
+import retrofit2.converter.gson.GsonConverterFactory
 import ru.pseudonimb.disneyc.databinding.FragmentHomeBinding
 
 class HomeFragment : Fragment() {
@@ -16,6 +21,15 @@ class HomeFragment : Fragment() {
     ): View {
         val binding = FragmentHomeBinding.inflate(layoutInflater)
         val view = binding.root
+
+        val retrofit = Retrofit.Builder()
+            .baseUrl("https://disneyapi.dev")
+            .addConverterFactory(GsonConverterFactory.create()).build()
+        val charAPI = retrofit.create(CharacterAPI::class.java)
+        CoroutineScope(Dispatchers.IO).launch {
+            val Char = charAPI.getCharacterById()
+        }
+
         return view
     }
 
