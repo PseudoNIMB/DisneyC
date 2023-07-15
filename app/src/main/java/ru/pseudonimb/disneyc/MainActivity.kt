@@ -9,8 +9,6 @@ import androidx.navigation.Navigation
 import ru.pseudonimb.disneyc.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
-    //private lateinit var navController: NavController
-    //не получилось реализовать
     private lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -21,15 +19,7 @@ class MainActivity : AppCompatActivity() {
 
         initNavigation()
 
-        supportFragmentManager
-            .beginTransaction()
-            .add(R.id.fragment_place, HomeFragment())
-            .addToBackStack(null)
-            .commit()
-
     }
-        //navController = Navigation.findNavController(this, R.id.home)
-        //не получилось реализовать
 
     private fun initNavigation(){
         binding.bottomNavigation.setOnNavigationItemSelectedListener {
