@@ -28,7 +28,7 @@ class HomeFragment : Fragment() {
             .build()
 
         val CharacterAPI = retrofit.create(CharacterAPI::class.java)
-        CoroutineScope(Dispatchers.IO).launch{
+        CoroutineScope(Dispatchers.Main).launch{
             val character = CharacterAPI.getCharacterById()
         }
 

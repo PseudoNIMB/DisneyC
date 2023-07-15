@@ -1,12 +1,12 @@
 package ru.pseudonimb.disneyc
 
-data class CharItem(
-    val data: Data
+data class CharItemModel (
+    val data: DataModel
 )
 
-data class Data (
+data class DataModel (
     val _id : Int,
-    val films : String,
-    val shortFilms : String,
-    val name : String
+    val name : String,
+    val imageUrl: String,
+    val url: String
 )
