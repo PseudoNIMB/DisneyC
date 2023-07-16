@@ -15,8 +15,7 @@ class FavorFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         val binding = FragmentFavorBinding.inflate(layoutInflater)
-        val view = binding.root
-        return view
+        return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

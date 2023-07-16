@@ -4,9 +4,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import androidx.fragment.app.Fragment
-import androidx.navigation.NavController
-import androidx.navigation.Navigation
 import ru.pseudonimb.disneyc.databinding.ActivityMainBinding
+import ru.pseudonimb.disneyc.databinding.FragmentHomeBinding
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -16,6 +15,10 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         val view = binding.root
         setContentView(view)
+        supportFragmentManager
+            .beginTransaction()
+            .replace(R.id.fragment_place, HomeFragment())
+            .commit()
 
         initNavigation()
 
