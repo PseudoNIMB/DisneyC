@@ -16,6 +16,7 @@ import kotlin.random.Random
 
 class HomeFragment : Fragment() {
     lateinit var binding : FragmentHomeBinding
+    private val adapter = CharAdapter()
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -24,6 +25,14 @@ class HomeFragment : Fragment() {
     ): View {
         val binding = FragmentHomeBinding.inflate(inflater)
         return binding.root
+        init()
+    }
+
+    private fun init(){
+        binding.apply {
+            home.layoutManager = LinearLayoutManager(context)
+            home.adapter = adapter
+        }
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
