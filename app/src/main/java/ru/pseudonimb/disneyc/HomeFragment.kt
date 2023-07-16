@@ -27,11 +27,13 @@ class HomeFragment : Fragment() {
             .addConverterFactory(GsonConverterFactory.create())
             .build()
 
-        val CharacterAPI = retrofit.create(CharacterAPI::class.java)
+        val characterAPI = retrofit.create(CharacterAPI::class.java)
         CoroutineScope(Dispatchers.Main).launch{
-            val character = CharacterAPI.getCharacterById()
-        }
+            val character = characterAPI.getCharacterById()
+            run{
 
+            }
+        }
 
         return view
     }
