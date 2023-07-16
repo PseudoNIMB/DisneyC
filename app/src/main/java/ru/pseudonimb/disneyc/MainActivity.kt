@@ -4,32 +4,25 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import androidx.fragment.app.Fragment
-import androidx.navigation.NavController
-import androidx.navigation.Navigation
+import androidx.recyclerview.widget.LinearLayoutManager
 import ru.pseudonimb.disneyc.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
-    //private lateinit var navController: NavController
-    //не получилось реализовать
     private lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
-        val view = binding.root
-        setContentView(view)
-
-        initNavigation()
+        setContentView(binding.root)
 
         supportFragmentManager
             .beginTransaction()
-            .add(R.id.fragment_place, HomeFragment())
-            .addToBackStack(null)
+            .replace(R.id.fragment_place, HomeFragment())
             .commit()
 
+        initNavigation()
+
     }
-        //navController = Navigation.findNavController(this, R.id.home)
-        //не получилось реализовать
 
     private fun initNavigation(){
         binding.bottomNavigation.setOnNavigationItemSelectedListener {

@@ -14,9 +14,8 @@ class SettingsFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val binding = FragmentSettingsBinding.inflate(layoutInflater)
-        val view = binding.root
-        return view
+        val binding = FragmentSettingsBinding.inflate(inflater)
+        return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
