@@ -6,7 +6,9 @@ import androidx.recyclerview.widget.RecyclerView
 class CharAdapter : RecyclerView.Adapter<CharAdapter.CharHolder> {
 
     class CharHolder(char_item: View) : RecyclerView.ViewHolder(char_item) {
+        fun bind(char : Char){
 
+        }
     }
 
 }
