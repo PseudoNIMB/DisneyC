@@ -5,7 +5,6 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import ru.pseudonimb.disneyc.databinding.ActivityMainBinding
-import ru.pseudonimb.disneyc.databinding.FragmentHomeBinding
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
