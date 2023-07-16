@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.LinearLayoutManager
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -14,6 +15,7 @@ import ru.pseudonimb.disneyc.databinding.FragmentHomeBinding
 import kotlin.random.Random
 
 class HomeFragment : Fragment() {
+    lateinit var binding : FragmentHomeBinding
 
     override fun onCreateView(
         inflater: LayoutInflater,
