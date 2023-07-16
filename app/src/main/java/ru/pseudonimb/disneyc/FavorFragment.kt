@@ -14,7 +14,7 @@ class FavorFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val binding = FragmentFavorBinding.inflate(layoutInflater)
+        val binding = FragmentFavorBinding.inflate(inflater)
         return binding.root
     }
 

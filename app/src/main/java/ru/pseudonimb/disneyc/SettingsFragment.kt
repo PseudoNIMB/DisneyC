@@ -14,7 +14,7 @@ class SettingsFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val binding = FragmentSettingsBinding.inflate(layoutInflater)
+        val binding = FragmentSettingsBinding.inflate(inflater)
         return binding.root
     }
 
