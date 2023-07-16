@@ -1,5 +1,6 @@
 package ru.pseudonimb.disneyc
 
+
 data class CharItemModel (
     val data: DataModel
 )

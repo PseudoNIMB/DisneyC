@@ -11,6 +11,7 @@ import kotlinx.coroutines.launch
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import ru.pseudonimb.disneyc.databinding.FragmentHomeBinding
+import kotlin.random.Random
 
 class HomeFragment : Fragment() {
 
@@ -27,15 +28,15 @@ class HomeFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         val retrofit = Retrofit.Builder()
-            .baseUrl("https://api.disneyapi.dev")
+            .baseUrl("https://api.disneyapi.dev/")
             .addConverterFactory(GsonConverterFactory.create())
             .build()
 
         val characterAPI = retrofit.create(CharacterAPI::class.java)
         CoroutineScope(Dispatchers.Main).launch{
-            val character = characterAPI.getCharacterById()
+            val character = characterAPI.getCharacterById(11)
             run{
-
+                this
             }
         }
     }
